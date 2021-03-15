@@ -8,7 +8,7 @@
 import XCTest
 @testable import EMLApp
 
-class EMLAppTests: XCTestCase {
+class MainViewControllerTests: XCTestCase {
 
     func test_mainViewController_rendersTitle() {
         XCTAssertEqual(makeSUT("Main").title, "Main")
@@ -27,8 +27,10 @@ class EMLAppTests: XCTestCase {
         XCTAssertEqual((sut.tableView.numberOfRows(inSection: 0)), 1)
     }
     
-    func test_tableViewCell_hasCorrectReuseIdentifier() {
-        let controller = makeSUT()
+    func test_tableViewCell_hasCorrectTextLabelText() {
+        let controller = makeSUT(with: [MenuItem(title: "T1", description: "D1")])
+        XCTAssertEqual(controller.tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(controller.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text, "T1")
         XCTAssertEqual(controller.tableView.dataSource?.tableView(controller.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier, UITableViewCell.reuseIdentifier())
     }
     

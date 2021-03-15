@@ -7,24 +7,6 @@
 
 import UIKit
 
-struct MenuItem{
-    var title: String
-    var description: String
-}
-
-protocol Menu {
-    var menuItems: [MenuItem] { get }
-    mutating func addMenuItem(_ menuItem: MenuItem)
-}
-
-struct MainMenu: Menu {
-    var menuItems: [MenuItem] = []
-    
-    mutating func addMenuItem(_ menuItem: MenuItem) {
-        menuItems.append(menuItem)
-    }
-}
-
 final class MainViewController: UIViewController {
 
     let tableView = UITableView()
@@ -33,7 +15,7 @@ final class MainViewController: UIViewController {
     init(_ title: String, with menuItems: [MenuItem] = []) {
         super.init(nibName: nil, bundle: nil)
         self.title = title
-        menuItems.forEach { menu.addMenuItem($0) }
+        menu.addMenuItems(menuItems)
     }
     
     override func viewDidLoad() {
@@ -66,12 +48,17 @@ extension MainViewController: UITableViewDataSource {
         self.tableView.register(cellClass: UITableViewCell.self)
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.menuItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(UITableViewCell.self, for: indexPath)
+        let cell = tableView.dequeueReusableCell(UITableViewCell.self)
+        cell.textLabel?.text = menu.menuItems[indexPath.row].title
         return cell
     }
 }
