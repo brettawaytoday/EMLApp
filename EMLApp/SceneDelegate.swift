@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import EMLEngine
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

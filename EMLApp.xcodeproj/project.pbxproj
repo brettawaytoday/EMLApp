@@ -9,25 +9,62 @@
 /* Begin PBXBuildFile section */
 		DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96E825FE86760015D4DF /* AppDelegate.swift */; };
 		DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */; };
-		DE9D96ED25FE86760015D4DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96EC25FE86760015D4DF /* ViewController.swift */; };
-		DE9D96F025FE86760015D4DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96EE25FE86760015D4DF /* Main.storyboard */; };
 		DE9D96F225FE86770015D4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96F125FE86770015D4DF /* Assets.xcassets */; };
 		DE9D96F525FE86770015D4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96F325FE86770015D4DF /* LaunchScreen.storyboard */; };
+		DE9D973D25FE88DF0015D4DF /* EMLEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */; };
+		DE9D973E25FE88DF0015D4DF /* EMLEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9D974725FED8940015D4DF /* EMLAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D974625FED8940015D4DF /* EMLAppTests.swift */; };
+		DE9D975425FEDA220015D4DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D975325FEDA220015D4DF /* MainViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE9D974925FED8940015D4DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE9D96DD25FE86760015D4DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9D96E425FE86760015D4DF;
+			remoteInfo = EMLApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE9D973F25FE88DF0015D4DF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE9D973E25FE88DF0015D4DF /* EMLEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DE9D96E525FE86760015D4DF /* EMLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D96E825FE86760015D4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE9D96EC25FE86760015D4DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE9D96EF25FE86760015D4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE9D96F125FE86770015D4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE9D96F425FE86770015D4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE9D96F625FE86770015D4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMLEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9D974425FED8940015D4DF /* EMLAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMLAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9D974625FED8940015D4DF /* EMLAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLAppTests.swift; sourceTree = "<group>"; };
+		DE9D974825FED8940015D4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9D975325FEDA220015D4DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DE9D96E225FE86760015D4DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9D973D25FE88DF0015D4DF /* EMLEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9D974125FED8940015D4DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				DE9D96E725FE86760015D4DF /* EMLApp */,
+				DE9D974525FED8940015D4DF /* EMLAppTests */,
 				DE9D96E625FE86760015D4DF /* Products */,
+				DE9D973B25FE88DF0015D4DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9D96E525FE86760015D4DF /* EMLApp.app */,
+				DE9D974425FED8940015D4DF /* EMLAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +98,29 @@
 			children = (
 				DE9D96E825FE86760015D4DF /* AppDelegate.swift */,
 				DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */,
-				DE9D96EC25FE86760015D4DF /* ViewController.swift */,
-				DE9D96EE25FE86760015D4DF /* Main.storyboard */,
 				DE9D96F125FE86770015D4DF /* Assets.xcassets */,
 				DE9D96F325FE86770015D4DF /* LaunchScreen.storyboard */,
 				DE9D96F625FE86770015D4DF /* Info.plist */,
+				DE9D975325FEDA220015D4DF /* MainViewController.swift */,
 			);
 			path = EMLApp;
+			sourceTree = "<group>";
+		};
+		DE9D973B25FE88DF0015D4DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE9D974525FED8940015D4DF /* EMLAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D974625FED8940015D4DF /* EMLAppTests.swift */,
+				DE9D974825FED8940015D4DF /* Info.plist */,
+			);
+			path = EMLAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +133,7 @@
 				DE9D96E125FE86760015D4DF /* Sources */,
 				DE9D96E225FE86760015D4DF /* Frameworks */,
 				DE9D96E325FE86760015D4DF /* Resources */,
+				DE9D973F25FE88DF0015D4DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -86,6 +143,24 @@
 			productName = EMLApp;
 			productReference = DE9D96E525FE86760015D4DF /* EMLApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DE9D974325FED8940015D4DF /* EMLAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9D974D25FED8940015D4DF /* Build configuration list for PBXNativeTarget "EMLAppTests" */;
+			buildPhases = (
+				DE9D974025FED8940015D4DF /* Sources */,
+				DE9D974125FED8940015D4DF /* Frameworks */,
+				DE9D974225FED8940015D4DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9D974A25FED8940015D4DF /* PBXTargetDependency */,
+			);
+			name = EMLAppTests;
+			productName = EMLAppTests;
+			productReference = DE9D974425FED8940015D4DF /* EMLAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +173,10 @@
 				TargetAttributes = {
 					DE9D96E425FE86760015D4DF = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					DE9D974325FED8940015D4DF = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DE9D96E425FE86760015D4DF;
 					};
 				};
 			};
@@ -115,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				DE9D96E425FE86760015D4DF /* EMLApp */,
+				DE9D974325FED8940015D4DF /* EMLAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +206,13 @@
 			files = (
 				DE9D96F525FE86770015D4DF /* LaunchScreen.storyboard in Resources */,
 				DE9D96F225FE86770015D4DF /* Assets.xcassets in Resources */,
-				DE9D96F025FE86760015D4DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9D974225FED8940015D4DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +223,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE9D96ED25FE86760015D4DF /* ViewController.swift in Sources */,
+				DE9D975425FEDA220015D4DF /* MainViewController.swift in Sources */,
 				DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */,
 				DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE9D974025FED8940015D4DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9D974725FED8940015D4DF /* EMLAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		DE9D96EE25FE86760015D4DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE9D96EF25FE86760015D4DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		DE9D974A25FED8940015D4DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9D96E425FE86760015D4DF /* EMLApp */;
+			targetProxy = DE9D974925FED8940015D4DF /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		DE9D96F325FE86770015D4DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -319,6 +413,46 @@
 			};
 			name = Release;
 		};
+		DE9D974B25FED8940015D4DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33F787YXKZ;
+				INFOPLIST_FILE = EMLAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cuttawayproductions.EMLAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EMLApp.app/EMLApp";
+			};
+			name = Debug;
+		};
+		DE9D974C25FED8940015D4DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33F787YXKZ;
+				INFOPLIST_FILE = EMLAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cuttawayproductions.EMLAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EMLApp.app/EMLApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +470,15 @@
 			buildConfigurations = (
 				DE9D96FA25FE86770015D4DF /* Debug */,
 				DE9D96FB25FE86770015D4DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9D974D25FED8940015D4DF /* Build configuration list for PBXNativeTarget "EMLAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9D974B25FED8940015D4DF /* Debug */,
+				DE9D974C25FED8940015D4DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
