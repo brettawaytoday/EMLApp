@@ -37,14 +37,6 @@ class EMLAppTests: XCTestCase {
         XCTAssertEqual(controller.tableView.frame.width, controller.view.bounds.width)
         XCTAssertEqual(controller.tableView.frame.height, controller.view.bounds.height)
     }
-    
-    func test_menu_isNotNil() {
-        XCTAssertNotNil(makeSUT().menu)
-    }
-    
-    func test_addingMenuItemToMenu_increasesCount() {
-        XCTAssertEqual(makeMenu().menuItems.count, 1)
-    }
 
     
     //MARK: Helpers
@@ -54,11 +46,4 @@ class EMLAppTests: XCTestCase {
         _ = controller.view
         return controller
     }
-    
-    func makeMenu() -> Menu {
-        var menu = MainMenu()
-        menu.addMenuItem(MenuItem(title: "T1", description: "D1"))
-        return menu
-    }
-
 }
