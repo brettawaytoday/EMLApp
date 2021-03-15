@@ -11,7 +11,7 @@ import XCTest
 class EMLAppTests: XCTestCase {
 
     func test_mainViewController_rendersTitle() {
-        XCTAssertEqual(makeSUT().title, "Main")
+        XCTAssertEqual(makeSUT("Main").title, "Main")
     }
     
     func test_tableViewDatasource_notNil() {
@@ -23,7 +23,8 @@ class EMLAppTests: XCTestCase {
     }
     
     func test_tableView_hasRows() {
-        XCTAssertTrue((makeSUT().tableView.numberOfRows(inSection: 0)) == 1)
+        let sut = makeSUT(with: [MenuItem(title: "T1", description: "D1")])
+        XCTAssertEqual((sut.tableView.numberOfRows(inSection: 0)), 1)
     }
     
     func test_tableViewCell_hasCorrectReuseIdentifier() {
@@ -37,13 +38,27 @@ class EMLAppTests: XCTestCase {
         XCTAssertEqual(controller.tableView.frame.height, controller.view.bounds.height)
     }
     
+    func test_menu_isNotNil() {
+        XCTAssertNotNil(makeSUT().menu)
+    }
+    
+    func test_addingMenuItemToMenu_increasesCount() {
+        XCTAssertEqual(makeMenu().menuItems.count, 1)
+    }
+
     
     //MARK: Helpers
     
-    func makeSUT() -> MainViewController {
-        let controller = MainViewController()
+    func makeSUT(_ title: String = "", with menuItems: [MenuItem] = []) -> MainViewController {
+        let controller = MainViewController(title, with: menuItems)
         _ = controller.view
         return controller
+    }
+    
+    func makeMenu() -> Menu {
+        var menu = MainMenu()
+        menu.addMenuItem(MenuItem(title: "T1", description: "D1"))
+        return menu
     }
 
 }
