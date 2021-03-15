@@ -45,7 +45,7 @@ final class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource {
     private func assignTableViewDatasource() {
         self.tableView.dataSource = self
-        self.tableView.register(cellClass: UITableViewCell.self)
+        self.tableView.register(cellClass: MenuCell.self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,8 +57,13 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(UITableViewCell.self)
-        cell.textLabel?.text = menu.menuItems[indexPath.row].title
+        let cell = tableView.dequeueResusableCell(ofType: MenuCell.self, at: indexPath)
+        return formatted(cell, for: menu.menuItems[indexPath.row])
+    }
+    
+    private func formatted(_ cell: UITableViewCell, for menuItem: MenuItem) -> UITableViewCell {
+        cell.textLabel?.text = menuItem.title
+        cell.detailTextLabel?.text = menuItem.description
         return cell
     }
 }

@@ -31,7 +31,8 @@ class MainViewControllerTests: XCTestCase {
         let controller = makeSUT(with: [MenuItem(title: "T1", description: "D1")])
         XCTAssertEqual(controller.tableView.numberOfRows(inSection: 0), 1)
         XCTAssertEqual(controller.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text, "T1")
-        XCTAssertEqual(controller.tableView.dataSource?.tableView(controller.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier, UITableViewCell.reuseIdentifier())
+        XCTAssertEqual(controller.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.detailTextLabel?.text, "D1")
+        XCTAssertEqual(controller.tableView.dataSource?.tableView(controller.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier, MenuCell.reuseIdentifier())
     }
     
     func test_tableView_viewSizeEqualsDeviceView() {

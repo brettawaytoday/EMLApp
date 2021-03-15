@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE553A1025FFBC9400723E90 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE553A0F25FFBC9400723E90 /* MenuCell.swift */; };
 		DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96E825FE86760015D4DF /* AppDelegate.swift */; };
 		DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */; };
 		DE9D96F225FE86770015D4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96F125FE86770015D4DF /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE553A0F25FFBC9400723E90 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		DE9D96E525FE86760015D4DF /* EMLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D96E825FE86760015D4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				DE9D96F325FE86770015D4DF /* LaunchScreen.storyboard */,
 				DE9D96F625FE86770015D4DF /* Info.plist */,
 				DE9D975325FEDA220015D4DF /* MainViewController.swift */,
+				DE553A0F25FFBC9400723E90 /* MenuCell.swift */,
 				DE9D976B25FF269A0015D4DF /* MenuItem.swift */,
 				DE9D976825FF26520015D4DF /* Menu.swift */,
 				DE9D975F25FF113E0015D4DF /* UITableView+EXT.swift */,
@@ -241,6 +244,7 @@
 				DE9D976325FF116F0015D4DF /* UITableViewCell+EXT.swift in Sources */,
 				DE9D976025FF113E0015D4DF /* UITableView+EXT.swift in Sources */,
 				DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */,
+				DE553A1025FFBC9400723E90 /* MenuCell.swift in Sources */,
 				DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
