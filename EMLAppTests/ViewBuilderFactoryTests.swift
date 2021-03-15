@@ -11,8 +11,15 @@ import XCTest
 class ViewBuilderFactoryTests: XCTestCase {
 
     func test_buildMainView() {
-        let sut = ViewBuilderFactory()
+        let navigationController = UINavigationController()
+        let sut = ViewBuilderFactory(navigationController)
         XCTAssertEqual(sut.buildMainView().title, "Main")
+    }
+    
+    func test_buildMainView_confirmDelegateIsSelf() {
+        let navigationController = UINavigationController()
+        let sut = ViewBuilderFactory(navigationController)
+        XCTAssertNotNil(sut.buildMainView().delegate)
     }
 
 }

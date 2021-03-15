@@ -9,6 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    var delegate: ViewBuilderDelegate?
     let tableView = UITableView()
     internal var menu: Menu = MainMenu()
     
@@ -74,5 +75,13 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     private func assignTableViewDelegate() {
         self.tableView.delegate = self
+    }
+}
+
+//MARK: MainViewController - UITableView Navigation Extension
+
+extension MainViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
