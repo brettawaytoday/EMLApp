@@ -15,13 +15,13 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView("Main")
+        layoutView()
     }
     
     private func setupView(_ title: String) {
         self.title = title
         assignTableViewDatasource()
         assignTableViewDelegate()
-        layoutView()
     }
     
     private func layoutView() {
