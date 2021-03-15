@@ -10,4 +10,9 @@ import Foundation
 struct MenuItem {
     var title: String
     var description: String
+    var type: MenuType
+}
+
+enum MenuType {
+    case menu, report, detail
 }
