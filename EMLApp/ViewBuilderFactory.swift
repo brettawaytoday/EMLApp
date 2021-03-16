@@ -12,26 +12,27 @@ protocol ViewBuilderDelegate {
 }
 
 class ViewBuilderFactory: ViewBuilderDelegate {
-    var navigationController: UINavigationController
+    var navigationController = UINavigationController()
     
-    init(_ navigationController: UINavigationController) {
+    init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
+        buildMainView()
     }
     
     func viewRequest(_ type: MenuType) {
         switch type {
         case .menu:
-            print("menu")
+            self.navigationController.pushViewController(MenuViewController(), animated: true)
         case .report:
-            print("report")
+            self.navigationController.pushViewController(ReportViewController(), animated: true)
         case .detail:
             print("detail")
         }
     }
     
-    func buildMainView() -> MainViewController {
+    private func buildMainView() {
         let mainViewController = MainViewController("Main")
-        mainViewController.delegate = self
-        return mainViewController
+        mainViewController.viewBuilder = self
+        navigationController.pushViewController(mainViewController, animated: false)
     }
 }

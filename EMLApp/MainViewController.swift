@@ -9,7 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    var delegate: ViewBuilderDelegate?
+    var viewBuilder: ViewBuilderDelegate?
     let tableView = UITableView()
     internal var menu: Menu = MainMenu()
     
