@@ -26,7 +26,7 @@ class ViewBuilderFactory: ViewBuilderDelegate {
         case .report:
             self.navigationController.pushViewController(ReportViewController(), animated: true)
         case .detail:
-            print("detail")
+            self.navigationController.pushViewController(DetailsViewController(), animated: true)
         }
     }
     
@@ -36,3 +36,6 @@ class ViewBuilderFactory: ViewBuilderDelegate {
         navigationController.pushViewController(mainViewController, animated: false)
     }
 }
+
+
+

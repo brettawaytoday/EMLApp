@@ -23,9 +23,12 @@ class ViewBuilderFactoryTests: XCTestCase {
     
     func test_viewBuilder_buildsMainAndReportViewControllers_AndStacksViewControllersCorrectly() {
         sut.viewRequest(.report)
-        XCTAssertEqual(sut.navigationController.viewControllers.count, 2)
-        XCTAssertTrue(type(of: sut.navigationController.viewControllers.first!) == MainViewController.self)
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == ReportViewController.self)
+    }
+    
+    func test_viewBuilder_buildsMainAndDetailViewControllers_AndStacksViewControllersCorrectly() {
+        sut.viewRequest(.detail)
+        XCTAssertTrue(type(of: sut.navigationController.topViewController!) == DetailsViewController.self)
     }
 
 
