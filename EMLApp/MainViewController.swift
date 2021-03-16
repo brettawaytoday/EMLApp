@@ -82,6 +82,7 @@ extension MainViewController: UITableViewDelegate {
 
 extension MainViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let selectedMenuItem = menu.menuItems[indexPath.row]
+        viewBuilder?.viewRequest(selectedMenuItem.type)
     }
 }

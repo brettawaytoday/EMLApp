@@ -14,9 +14,9 @@ protocol ViewBuilderDelegate {
 class ViewBuilderFactory: ViewBuilderDelegate {
     var navigationController = UINavigationController()
     
-    init(with navigationController: UINavigationController) {
+    init(with navigationController: UINavigationController, with menu: Menu) {
         self.navigationController = navigationController
-        buildMainView()
+        buildMainView(with: menu)
     }
     
     func viewRequest(_ type: MenuType) {
@@ -30,8 +30,9 @@ class ViewBuilderFactory: ViewBuilderDelegate {
         }
     }
     
-    private func buildMainView() {
+    private func buildMainView(with menu: Menu) {
         let mainViewController = MainViewController("Main")
+        mainViewController.menu = menu
         mainViewController.viewBuilder = self
         navigationController.pushViewController(mainViewController, animated: false)
     }

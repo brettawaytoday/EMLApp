@@ -27,7 +27,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeRootViewController() -> UINavigationController {
-        return UINavigationController(rootViewController: MainViewController("Main", with: [MenuItem(title: "Schools", description: "A list of schools.", type: .menu), MenuItem(title: "Classrooms", description: "A list of all classrooms.", type: .menu)]))
+        let mainMenu = MainMenu(menuItems: [MenuItem(title: "Schools", description: "A list of schools.", type: .menu), MenuItem(title: "Classrooms", description: "A list of all classrooms.", type: .menu)])
+        let factory = ViewBuilderFactory(with: UINavigationController(), with: mainMenu)
+        return factory.navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -10,9 +10,8 @@ import XCTest
 
 class ViewBuilderFactoryTests: XCTestCase {
 
-    let sut = ViewBuilderFactory(with: SpyNavigationController())
-    
     func test_viewBuilder_buildsMainAndMenuViewControllers_AndStacksViewControllersCorrectly() {
+        let sut = makeSUT()
         XCTAssertEqual(sut.navigationController.viewControllers.count, 1)
         XCTAssertTrue(type(of: sut.navigationController.viewControllers.first!) == MainViewController.self)
         sut.viewRequest(.menu)
@@ -22,15 +21,24 @@ class ViewBuilderFactoryTests: XCTestCase {
     }
     
     func test_viewBuilder_buildsMainAndReportViewControllers_AndStacksViewControllersCorrectly() {
+        let sut = makeSUT()
         sut.viewRequest(.report)
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == ReportViewController.self)
     }
     
     func test_viewBuilder_buildsMainAndDetailViewControllers_AndStacksViewControllersCorrectly() {
+        let sut = makeSUT()
         sut.viewRequest(.detail)
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == DetailsViewController.self)
     }
-
+    
+    func makeSUT() -> ViewBuilderFactory {
+        return ViewBuilderFactory(with: SpyNavigationController(), with: makeMenu())
+    }
+    
+    func makeMenu() -> Menu {
+        return MainMenu(menuItems: [MenuItem(title: "T1", description: "D1", type: .menu)])
+    }
 
 }
 
