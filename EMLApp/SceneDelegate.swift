@@ -27,8 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeRootViewController() -> UINavigationController {
-        let mainMenu = MainMenu(menuItems: [MenuItem(title: "Schools", description: "A list of schools.", type: .menu), MenuItem(title: "Classrooms", description: "A list of all classrooms.", type: .menu)])
-        let factory = ViewBuilderFactory(with: UINavigationController(), with: mainMenu)
+        let factory = ViewBuilderFactory(with: UINavigationController(), with: EMLBuilders.mainMenu)
         return factory.navigationController
     }
 

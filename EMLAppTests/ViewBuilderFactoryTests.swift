@@ -17,7 +17,7 @@ class ViewBuilderFactoryTests: XCTestCase {
         sut.viewRequest(.menu)
         XCTAssertEqual(sut.navigationController.viewControllers.count, 2)
         XCTAssertTrue(type(of: sut.navigationController.viewControllers.first!) == MainViewController.self)
-        XCTAssertTrue(type(of: sut.navigationController.topViewController!) == MenuViewController.self)
+        XCTAssertTrue(type(of: sut.navigationController.topViewController!) == MenuViewController<String>.self)
     }
     
     func test_viewBuilder_buildsMainAndReportViewControllers_AndStacksViewControllersCorrectly() {

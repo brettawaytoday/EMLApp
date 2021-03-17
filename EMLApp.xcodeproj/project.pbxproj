@@ -13,6 +13,8 @@
 		DE5C97DE26002F140004EFB7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97DD26002F140004EFB7 /* MenuViewController.swift */; };
 		DE5C97E126002F3B0004EFB7 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97E026002F3B0004EFB7 /* ReportViewController.swift */; };
 		DE5C97E8260031BA0004EFB7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97E3260031440004EFB7 /* DetailsViewController.swift */; };
+		DE5C97EF260053E30004EFB7 /* EMLBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97EE260053E30004EFB7 /* EMLBuilders.swift */; };
+		DE5C97F226018B670004EFB7 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */; };
 		DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96E825FE86760015D4DF /* AppDelegate.swift */; };
 		DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */; };
 		DE9D96F225FE86770015D4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96F125FE86770015D4DF /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		DE5C97DD26002F140004EFB7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DE5C97E026002F3B0004EFB7 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		DE5C97E3260031440004EFB7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DE5C97EE260053E30004EFB7 /* EMLBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLBuilders.swift; sourceTree = "<group>"; };
+		DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
 		DE9D96E525FE86760015D4DF /* EMLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D96E825FE86760015D4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				DE9D976B25FF269A0015D4DF /* MenuItem.swift */,
 				DE9D976825FF26520015D4DF /* Menu.swift */,
 				DE9D975F25FF113E0015D4DF /* UITableView+EXT.swift */,
+				DE5C97EE260053E30004EFB7 /* EMLBuilders.swift */,
 				DE9D976225FF116F0015D4DF /* UITableViewCell+EXT.swift */,
 			);
 			path = EMLApp;
@@ -149,6 +154,7 @@
 				DE9D974625FED8940015D4DF /* MainViewControllerTests.swift */,
 				DE9D974825FED8940015D4DF /* Info.plist */,
 				DE5C97D625FFD4A50004EFB7 /* ViewBuilderFactoryTests.swift */,
+				DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */,
 			);
 			path = EMLAppTests;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			files = (
 				DE9D976C25FF269A0015D4DF /* MenuItem.swift in Sources */,
 				DE5C97DE26002F140004EFB7 /* MenuViewController.swift in Sources */,
+				DE5C97EF260053E30004EFB7 /* EMLBuilders.swift in Sources */,
 				DE5C97DA25FFD5770004EFB7 /* ViewBuilderFactory.swift in Sources */,
 				DE9D976925FF26520015D4DF /* Menu.swift in Sources */,
 				DE5C97E126002F3B0004EFB7 /* ReportViewController.swift in Sources */,
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5C97F226018B670004EFB7 /* MenuViewControllerTests.swift in Sources */,
 				DE9D974725FED8940015D4DF /* MainViewControllerTests.swift in Sources */,
 				DE5C97D725FFD4A50004EFB7 /* ViewBuilderFactoryTests.swift in Sources */,
 			);

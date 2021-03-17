@@ -24,7 +24,15 @@ final class MainViewController: UIViewController {
         setupView()
         layoutView()
     }
-    
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+//MARK: - MainViewController View Setup
+
+extension MainViewController {
     private func setupView() {
         assignTableViewDatasource()
         assignTableViewDelegate()
@@ -34,10 +42,6 @@ final class MainViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         tableView.frame = view.bounds
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 

@@ -22,7 +22,7 @@ class ViewBuilderFactory: ViewBuilderDelegate {
     func viewRequest(_ type: MenuType) {
         switch type {
         case .menu:
-            self.navigationController.pushViewController(MenuViewController(), animated: true)
+            self.navigationController.pushViewController(MenuViewController<String>(["First", "Second"]), animated: true)
         case .report:
             self.navigationController.pushViewController(ReportViewController(), animated: true)
         case .detail:
