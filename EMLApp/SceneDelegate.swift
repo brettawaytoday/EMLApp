@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EMLEngine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,6 +26,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func makeRootViewController() -> UINavigationController {
         let factory = ViewBuilderFactory(with: UINavigationController(), with: EMLBuilders.mainMenu)
+        #if DEBUG
+        let dataManager = makeDataManager()
+        let dataFactroy = DataFactory<Any>()
+        dataFactroy.dataManager = dataManager
+        factory.dataFactory = dataFactroy
+        #endif
         return factory.navigationController
     }
 
