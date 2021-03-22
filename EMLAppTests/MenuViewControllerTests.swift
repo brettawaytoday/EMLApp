@@ -37,23 +37,40 @@ class MenuViewControllerTests: XCTestCase {
     
     func test_populateCell_withSchool_returnsCorrectCellText() {
         let sut = makeSUT()
-        let cell = sut.populate(UITableViewCell(), with: School("School1"))
         
-        XCTAssertEqual(cell.textLabel?.text, "School1")
+        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(cell?.textLabel?.text, "School")
     }
     
     func test_populateCell_withClassroom_returnsCorrectCellText() {
-        let sut = makeSUT()
-        let cell = sut.populate(UITableViewCell(), with: Classroom("Classroom1"))
+        let classrooms = [Classroom("Classroom")]
+        let sut = MenuViewController<Classroom>(classrooms)
+        _ = sut.view
         
-        XCTAssertEqual(cell.textLabel?.text, "Classroom1")
+        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(cell?.textLabel?.text, "Classroom")
     }
     
     func test_populateCell_withMeal_returnsCorrectCellText() {
-        let sut = makeSUT()
-        let cell = sut.populate(UITableViewCell(), with: Meal(.regular, dietaries: []))
+        let meals = [Meal(.regular, dietaries: [])]
+        let sut = MenuViewController<Meal>(meals)
+        _ = sut.view
         
-        XCTAssertEqual(cell.textLabel?.text, "Regular")
+        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(cell?.textLabel?.text, "Regular")
+    }
+    
+    func test_populateCell_withString_returnsCorrectCellText() {
+        let strings = [""]
+        let sut = MenuViewController<String>(strings)
+        _ = sut.view
+        
+        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(cell?.textLabel?.text, "")
     }
 
     

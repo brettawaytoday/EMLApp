@@ -38,7 +38,7 @@ class MenuViewController<T>: UIViewController, UITableViewDataSource, UITableVie
         return populate(cell, with: items[indexPath.row])
     }
     
-    func populate<T>(_ cell: UITableViewCell, with item: T) -> UITableViewCell {
+    private func populate<T>(_ cell: UITableViewCell, with item: T) -> UITableViewCell {
         switch item {
         case let (school as School) where item is School:
             cell.textLabel?.text = school.name
