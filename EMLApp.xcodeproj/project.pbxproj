@@ -15,18 +15,21 @@
 		DE5C97E8260031BA0004EFB7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97E3260031440004EFB7 /* DetailsViewController.swift */; };
 		DE5C97EF260053E30004EFB7 /* EMLBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97EE260053E30004EFB7 /* EMLBuilders.swift */; };
 		DE5C97F226018B670004EFB7 /* MenuViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */; };
+		DE5C97F52601BDA40004EFB7 /* DataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97F42601BDA40004EFB7 /* DataFactoryTests.swift */; };
+		DE5C97F826025C6A0004EFB7 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C97F726025C6A0004EFB7 /* DataFactory.swift */; };
+		DE61EFB22602636B00B2A4A8 /* EMLEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE61EFB12602636B00B2A4A8 /* EMLEngine.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DE61EFB32602636B00B2A4A8 /* EMLEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE61EFB12602636B00B2A4A8 /* EMLEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96E825FE86760015D4DF /* AppDelegate.swift */; };
 		DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */; };
 		DE9D96F225FE86770015D4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96F125FE86770015D4DF /* Assets.xcassets */; };
 		DE9D96F525FE86770015D4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9D96F325FE86770015D4DF /* LaunchScreen.storyboard */; };
-		DE9D973D25FE88DF0015D4DF /* EMLEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */; };
-		DE9D973E25FE88DF0015D4DF /* EMLEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE9D974725FED8940015D4DF /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D974625FED8940015D4DF /* MainViewControllerTests.swift */; };
 		DE9D975425FEDA220015D4DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D975325FEDA220015D4DF /* MainViewController.swift */; };
 		DE9D976025FF113E0015D4DF /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D975F25FF113E0015D4DF /* UITableView+EXT.swift */; };
 		DE9D976325FF116F0015D4DF /* UITableViewCell+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D976225FF116F0015D4DF /* UITableViewCell+EXT.swift */; };
 		DE9D976925FF26520015D4DF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D976825FF26520015D4DF /* Menu.swift */; };
 		DE9D976C25FF269A0015D4DF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D976B25FF269A0015D4DF /* MenuItem.swift */; };
+		DEB64CE72608F4BA000E981A /* SpyBuilderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB64CE62608F4BA000E981A /* SpyBuilderHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DE9D973F25FE88DF0015D4DF /* Embed Frameworks */ = {
+		DE5C980C26025FD30004EFB7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE9D973E25FE88DF0015D4DF /* EMLEngine.framework in Embed Frameworks */,
+				DE61EFB32602636B00B2A4A8 /* EMLEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,13 +65,15 @@
 		DE5C97E3260031440004EFB7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DE5C97EE260053E30004EFB7 /* EMLBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMLBuilders.swift; sourceTree = "<group>"; };
 		DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTests.swift; sourceTree = "<group>"; };
+		DE5C97F42601BDA40004EFB7 /* DataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactoryTests.swift; sourceTree = "<group>"; };
+		DE5C97F726025C6A0004EFB7 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
+		DE61EFB12602636B00B2A4A8 /* EMLEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMLEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D96E525FE86760015D4DF /* EMLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D96E825FE86760015D4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9D96EA25FE86760015D4DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE9D96F125FE86770015D4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE9D96F425FE86770015D4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE9D96F625FE86770015D4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMLEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D974425FED8940015D4DF /* EMLAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMLAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D974625FED8940015D4DF /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		DE9D974825FED8940015D4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		DE9D976225FF116F0015D4DF /* UITableViewCell+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+EXT.swift"; sourceTree = "<group>"; };
 		DE9D976825FF26520015D4DF /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DE9D976B25FF269A0015D4DF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		DEB64CE62608F4BA000E981A /* SpyBuilderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyBuilderHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE9D973D25FE88DF0015D4DF /* EMLEngine.framework in Frameworks */,
+				DE61EFB22602636B00B2A4A8 /* EMLEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +141,7 @@
 				DE9D976825FF26520015D4DF /* Menu.swift */,
 				DE9D975F25FF113E0015D4DF /* UITableView+EXT.swift */,
 				DE5C97EE260053E30004EFB7 /* EMLBuilders.swift */,
+				DE5C97F726025C6A0004EFB7 /* DataFactory.swift */,
 				DE9D976225FF116F0015D4DF /* UITableViewCell+EXT.swift */,
 			);
 			path = EMLApp;
@@ -143,7 +150,7 @@
 		DE9D973B25FE88DF0015D4DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE9D973C25FE88DF0015D4DF /* EMLEngine.framework */,
+				DE61EFB12602636B00B2A4A8 /* EMLEngine.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 				DE9D974625FED8940015D4DF /* MainViewControllerTests.swift */,
 				DE9D974825FED8940015D4DF /* Info.plist */,
 				DE5C97D625FFD4A50004EFB7 /* ViewBuilderFactoryTests.swift */,
+				DEB64CE62608F4BA000E981A /* SpyBuilderHelper.swift */,
+				DE5C97F42601BDA40004EFB7 /* DataFactoryTests.swift */,
 				DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */,
 			);
 			path = EMLAppTests;
@@ -169,7 +178,7 @@
 				DE9D96E125FE86760015D4DF /* Sources */,
 				DE9D96E225FE86760015D4DF /* Frameworks */,
 				DE9D96E325FE86760015D4DF /* Resources */,
-				DE9D973F25FE88DF0015D4DF /* Embed Frameworks */,
+				DE5C980C26025FD30004EFB7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +278,7 @@
 				DE9D976325FF116F0015D4DF /* UITableViewCell+EXT.swift in Sources */,
 				DE9D976025FF113E0015D4DF /* UITableView+EXT.swift in Sources */,
 				DE9D96E925FE86760015D4DF /* AppDelegate.swift in Sources */,
+				DE5C97F826025C6A0004EFB7 /* DataFactory.swift in Sources */,
 				DE553A1025FFBC9400723E90 /* MenuCell.swift in Sources */,
 				DE9D96EB25FE86760015D4DF /* SceneDelegate.swift in Sources */,
 				DE5C97E8260031BA0004EFB7 /* DetailsViewController.swift in Sources */,
@@ -280,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5C97F226018B670004EFB7 /* MenuViewControllerTests.swift in Sources */,
+				DEB64CE72608F4BA000E981A /* SpyBuilderHelper.swift in Sources */,
 				DE9D974725FED8940015D4DF /* MainViewControllerTests.swift in Sources */,
+				DE5C97F52601BDA40004EFB7 /* DataFactoryTests.swift in Sources */,
 				DE5C97D725FFD4A50004EFB7 /* ViewBuilderFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

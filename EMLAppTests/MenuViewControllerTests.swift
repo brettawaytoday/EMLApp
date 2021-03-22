@@ -6,7 +6,9 @@
 //
 
 import XCTest
+import EMLEngine
 @testable import EMLApp
+@testable import EMLEngine
 
 class MenuViewControllerTests: XCTestCase {
     
@@ -19,16 +21,22 @@ class MenuViewControllerTests: XCTestCase {
     }
     
     func test_tableView_hasRows() {
-        let sut = makeSUT(with: ["item"])
+        let sut = makeSUT()
         XCTAssertEqual((sut.tableView.numberOfRows(inSection: 0)), 1)
     }
     
-    func test_tableViewCell_hasCorrectTextLabelText() {
-        let controller = makeSUT(with: ["item"])
-        XCTAssertEqual(controller.tableView.numberOfRows(inSection: 0), 1)
-        XCTAssertEqual(controller.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text, "item")
-        XCTAssertEqual(controller.tableView.dataSource?.tableView(controller.tableView, cellForRowAt: IndexPath(row: 0, section: 0)).reuseIdentifier, UITableViewCell.reuseIdentifier())
+    func test_menuViewItems_notNil() {
+        XCTAssertEqual(makeSUT().items.count, 1)
     }
+    
+//    func test_factory_isNotNil() {
+//        let menuItem = MenuItem(title: "", description: "", type: .menu, dataType: .school)
+//        let factory = ViewBuilderFactory(with: SpyNavigationController(), with: MainMenu(menuItems: [menuItem]))
+//        XCTAssertNotNil(factory.navigationController.topViewController)
+//        XCTAssertEqual(factory.navigationController.viewControllers.count, 1)
+//        factory.viewRequest(menuItem)
+//        XCTAssertEqual(factory.navigationController.viewControllers.count, 2)
+//    }
     
     func test_tableView_viewSizeEqualsDeviceView() {
         let controller = makeSUT()
@@ -39,9 +47,12 @@ class MenuViewControllerTests: XCTestCase {
     
     //MARK: Helpers
     
-    func makeSUT(with items: [String] = []) -> MenuViewController<String> {
-        let controller = MenuViewController<String>(items)
+    func makeSUT() -> MenuViewController<School> {
+        let school = School("School")
+        let schools = [school]
+        let controller = MenuViewController<School>(schools)
         _ = controller.view
         return controller
     }
 }
+

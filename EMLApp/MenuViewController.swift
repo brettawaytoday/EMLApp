@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EMLEngine
 
 class MenuViewController<T>: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -34,7 +35,15 @@ class MenuViewController<T>: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueResusableCell(ofType: UITableViewCell.self, at: indexPath)
-        cell.textLabel?.text = items[indexPath.row] as? String
+        if let school: School = items[indexPath.row] as? School {
+            cell.textLabel?.text = school.name
+        }
+        if let classroom: Classroom = items[indexPath.row] as? Classroom {
+            cell.textLabel?.text = classroom.name
+        }
+        if let meal: Meal = items[indexPath.row] as? Meal {
+            cell.textLabel?.text = meal.description
+        }
         return cell
     }
 }

@@ -23,12 +23,12 @@ class MainViewControllerTests: XCTestCase {
     }
     
     func test_tableView_hasRows() {
-        let sut = makeSUT(with: [MenuItem(title: "T1", description: "D1", type: .menu)])
+        let sut = makeSUT(with: [MenuItem(title: "T1", description: "D1", type: .menu, dataType: .school)])
         XCTAssertEqual((sut.tableView.numberOfRows(inSection: 0)), 1)
     }
     
     func test_tableViewCell_hasCorrectTextLabelText() {
-        let controller = makeSUT(with: [MenuItem(title: "T1", description: "D1", type: .menu)])
+        let controller = makeSUT(with: [MenuItem(title: "T1", description: "D1", type: .menu, dataType: .school)])
         XCTAssertEqual(controller.tableView.numberOfRows(inSection: 0), 1)
         XCTAssertEqual(controller.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text, "T1")
         XCTAssertEqual(controller.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.detailTextLabel?.text, "D1")
