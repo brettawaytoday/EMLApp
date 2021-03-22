@@ -29,19 +29,31 @@ class MenuViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSUT().items.count, 1)
     }
     
-//    func test_factory_isNotNil() {
-//        let menuItem = MenuItem(title: "", description: "", type: .menu, dataType: .school)
-//        let factory = ViewBuilderFactory(with: SpyNavigationController(), with: MainMenu(menuItems: [menuItem]))
-//        XCTAssertNotNil(factory.navigationController.topViewController)
-//        XCTAssertEqual(factory.navigationController.viewControllers.count, 1)
-//        factory.viewRequest(menuItem)
-//        XCTAssertEqual(factory.navigationController.viewControllers.count, 2)
-//    }
-    
     func test_tableView_viewSizeEqualsDeviceView() {
         let controller = makeSUT()
         XCTAssertEqual(controller.tableView.frame.width, controller.view.bounds.width)
         XCTAssertEqual(controller.tableView.frame.height, controller.view.bounds.height)
+    }
+    
+    func test_populateCell_withSchool_returnsCorrectCellText() {
+        let sut = makeSUT()
+        let cell = sut.populate(UITableViewCell(), with: School("School1"))
+        
+        XCTAssertEqual(cell.textLabel?.text, "School1")
+    }
+    
+    func test_populateCell_withClassroom_returnsCorrectCellText() {
+        let sut = makeSUT()
+        let cell = sut.populate(UITableViewCell(), with: Classroom("Classroom1"))
+        
+        XCTAssertEqual(cell.textLabel?.text, "Classroom1")
+    }
+    
+    func test_populateCell_withMeal_returnsCorrectCellText() {
+        let sut = makeSUT()
+        let cell = sut.populate(UITableViewCell(), with: Meal(.regular, dietaries: []))
+        
+        XCTAssertEqual(cell.textLabel?.text, "Regular")
     }
 
     

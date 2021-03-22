@@ -21,6 +21,18 @@ class ViewBuilderFactoryTests: XCTestCase {
         XCTAssertTrue(type(of: sut.navigationController.viewControllers.first!) == MainViewController.self)
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == MenuViewController<School>.self)
     }
+    
+    func test_viewBuilder_buildsMainViewController_withClassroomMenuViewRequest_stacksViewControllersCorrectly() {
+        let sut = makeSUT()
+        sut.viewRequest(MenuItem(title: "", description: "", type: .menu, dataType: .classroom))
+        XCTAssertTrue(type(of: sut.navigationController.topViewController!) == MenuViewController<Classroom>.self)
+    }
+    
+    func test_viewBuilder_buildsMainViewController_withMealMenuViewRequest_stacksViewControllersCorrectly() {
+        let sut = makeSUT()
+        sut.viewRequest(MenuItem(title: "", description: "", type: .menu, dataType: .meal))
+        XCTAssertTrue(type(of: sut.navigationController.topViewController!) == MenuViewController<Meal>.self)
+    }
 
     func test_viewBuilder_buildsMainAndReportViewControllers_AndStacksViewControllersCorrectly() {
         let sut = makeSUT()

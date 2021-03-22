@@ -35,15 +35,21 @@ class MenuViewController<T>: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueResusableCell(ofType: UITableViewCell.self, at: indexPath)
-        if let school: School = items[indexPath.row] as? School {
+        return populate(cell, with: items[indexPath.row])
+    }
+    
+    func populate<T>(_ cell: UITableViewCell, with item: T) -> UITableViewCell {
+        switch item {
+        case let (school as School) where item is School:
             cell.textLabel?.text = school.name
-        }
-        if let classroom: Classroom = items[indexPath.row] as? Classroom {
+        case let (classroom as Classroom) where item is Classroom:
             cell.textLabel?.text = classroom.name
-        }
-        if let meal: Meal = items[indexPath.row] as? Meal {
+        case let (meal as Meal) where item is Meal:
             cell.textLabel?.text = meal.description
+        default:
+            cell.textLabel?.text = ""
         }
+        
         return cell
     }
 }
