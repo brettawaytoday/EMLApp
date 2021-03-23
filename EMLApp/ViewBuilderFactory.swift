@@ -49,6 +49,10 @@ class ViewBuilderFactory: ViewBuilderDelegate {
             print("")
         case .distributionReport:
             print("")
+        case .packagingReport:
+            if let data: [Packaging] = fetchData(for: [Packaging].self, for: menuItem) {
+                completeViewRequest(with: data, for: menuItem)
+            }
         }
     }
     

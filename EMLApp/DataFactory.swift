@@ -33,6 +33,9 @@ class DataFactory<T> {
             return nil
         case .distributionReport:
             return nil
+        case .packagingReport:
+            guard let data = dataManager?.getPackaging() as? T else { return nil }
+            return data
         }
     }
     

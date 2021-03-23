@@ -19,5 +19,5 @@ enum MenuType {
 }
 
 enum MenuData {
-    case school, classroom, meal, schoolReport, classroomReport, mealReport, kitchenReport, distributionReport
+    case school, classroom, meal, schoolReport, classroomReport, mealReport, kitchenReport, distributionReport, packagingReport
 }

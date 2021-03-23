@@ -45,6 +45,12 @@ class ViewBuilderFactoryTests: XCTestCase {
         sut.viewRequest(MenuItem(title: "", description: "", type: .detail, dataType: .school))
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == DetailsViewController.self)
     }
+    
+    func test_viewBuilder_buildsMainAndReportViewControllers_forPackagingReport() {
+        let sut = makeSUT()
+        sut.viewRequest(MenuItem(title: "", description: "", type: .report, dataType: .packagingReport))
+        XCTAssertTrue(type(of: sut.navigationController.topViewController!) == ReportViewController.self)
+    }
 
     func makeSUT() -> ViewBuilderFactory {
         let holder = SpyBuilder()
