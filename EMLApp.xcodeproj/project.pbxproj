@@ -30,6 +30,8 @@
 		DE9D976925FF26520015D4DF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D976825FF26520015D4DF /* Menu.swift */; };
 		DE9D976C25FF269A0015D4DF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D976B25FF269A0015D4DF /* MenuItem.swift */; };
 		DEB64CE72608F4BA000E981A /* SpyBuilderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB64CE62608F4BA000E981A /* SpyBuilderHelper.swift */; };
+		DEB64CEE26096FA4000E981A /* ReportViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB64CED26096FA4000E981A /* ReportViewControllerTests.swift */; };
+		DEB64CF1260970A6000E981A /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB64CF0260970A6000E981A /* SpyNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		DE9D976825FF26520015D4DF /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DE9D976B25FF269A0015D4DF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		DEB64CE62608F4BA000E981A /* SpyBuilderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyBuilderHelper.swift; sourceTree = "<group>"; };
+		DEB64CED26096FA4000E981A /* ReportViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewControllerTests.swift; sourceTree = "<group>"; };
+		DEB64CF0260970A6000E981A /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,8 @@
 				DE9D974625FED8940015D4DF /* MainViewControllerTests.swift */,
 				DE9D974825FED8940015D4DF /* Info.plist */,
 				DE5C97D625FFD4A50004EFB7 /* ViewBuilderFactoryTests.swift */,
+				DEB64CF0260970A6000E981A /* SpyNavigationController.swift */,
+				DEB64CED26096FA4000E981A /* ReportViewControllerTests.swift */,
 				DEB64CE62608F4BA000E981A /* SpyBuilderHelper.swift */,
 				DE5C97F42601BDA40004EFB7 /* DataFactoryTests.swift */,
 				DE5C97F126018B670004EFB7 /* MenuViewControllerTests.swift */,
@@ -289,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB64CEE26096FA4000E981A /* ReportViewControllerTests.swift in Sources */,
 				DE5C97F226018B670004EFB7 /* MenuViewControllerTests.swift in Sources */,
 				DEB64CE72608F4BA000E981A /* SpyBuilderHelper.swift in Sources */,
+				DEB64CF1260970A6000E981A /* SpyNavigationController.swift in Sources */,
 				DE9D974725FED8940015D4DF /* MainViewControllerTests.swift in Sources */,
 				DE5C97F52601BDA40004EFB7 /* DataFactoryTests.swift in Sources */,
 				DE5C97D725FFD4A50004EFB7 /* ViewBuilderFactoryTests.swift in Sources */,
