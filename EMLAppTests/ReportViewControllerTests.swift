@@ -12,11 +12,23 @@ import EMLEngine
 
 class ReportViewControllerTests: XCTestCase {
     
-//    func test_dataReturned() {
-//        let spyNavigationController = SpyNavigationController()
-//        let viewBuilderFactory = ViewBuilderFactory(with: spyNavigationController, with: EMLBuilders.mainMenu)
-//        viewBuilderFactory.viewRequest(MenuItem(title: "", description: "", type: .report, dataType: .packagingReport))
-//        XCTAssertTrue(type(of: viewBuilderFactory.navigationController.topViewController!) == ReportViewController.self)
-//    }
+    func test_reportViewController_titleIsReport() {
+        let sut = ReportViewController(reports: [])
+        _ = sut.view
+        XCTAssertEqual(sut.title, "Report")
+    }
+    
+    func test_reportViewController_itemsCountIsCorrect() {
+        let sut = ReportViewController(reports: [])
+        _ = sut.view
+        XCTAssertNotNil(sut.reports)
+    }
+    
+    func test_reportViewController_tableView_hasDataSource() {
+        let sut = ReportViewController(reports: [])
+        _ = sut.view
+        
+        XCTAssertNotNil(sut.tableView.dataSource)
+    }
     
 }

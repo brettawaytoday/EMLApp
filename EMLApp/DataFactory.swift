@@ -24,11 +24,11 @@ class DataFactory<T> {
             guard let data = dataManager?.getMeals() as? T else { return nil }
             return data
         case .schoolReport:
-            return nil
+            return dataManager?.getReport() as? T
         case .classroomReport:
-            return nil
+            return dataManager?.getReport() as? T
         case .mealReport:
-            return nil
+            return dataManager?.getReport() as? T
         case .kitchenReport:
             return nil
         case .distributionReport:
@@ -37,6 +37,10 @@ class DataFactory<T> {
             guard let data = dataManager?.getPackaging() as? T else { return nil }
             return data
         }
+    }
+    
+    func fetchReport() -> Report? {
+        return dataManager?.getReport()
     }
     
 }

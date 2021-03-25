@@ -30,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let dataManager = makeDataManager()
         let dataFactroy = DataFactory<Any>()
         dataFactroy.dataManager = dataManager
+        
         factory.dataFactory = dataFactroy
         #endif
         return factory.navigationController

@@ -36,7 +36,7 @@ class ViewBuilderFactoryTests: XCTestCase {
 
     func test_viewBuilder_buildsMainAndReportViewControllers_AndStacksViewControllersCorrectly() {
         let sut = makeSUT()
-        sut.viewRequest(MenuItem(title: "", description: "", type: .report, dataType: .school))
+        sut.viewRequest(MenuItem(title: "", description: "", type: .report, dataType: .schoolReport))
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == ReportViewController.self)
     }
 
@@ -48,7 +48,7 @@ class ViewBuilderFactoryTests: XCTestCase {
     
     func test_viewBuilder_buildsMainAndReportViewControllers_forPackagingReport() {
         let sut = makeSUT()
-        sut.viewRequest(MenuItem(title: "", description: "", type: .report, dataType: .packagingReport))
+        sut.viewRequest(MenuItem(title: "", description: "", type: .report, dataType: .schoolReport))
         XCTAssertTrue(type(of: sut.navigationController.topViewController!) == ReportViewController.self)
     }
 
@@ -64,7 +64,3 @@ class ViewBuilderFactoryTests: XCTestCase {
     }
 
 }
-
-
-
-

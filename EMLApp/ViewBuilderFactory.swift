@@ -40,9 +40,15 @@ class ViewBuilderFactory: ViewBuilderDelegate {
                 completeViewRequest(with: data, for: menuItem)
             }
         case .schoolReport:
-            print("")
+            if let report: ReportGenerator = dataFactory?.fetchReport() as? ReportGenerator {
+                let schools = report.schools
+                self.navigationController.pushViewController(ReportViewController(reports: schools), animated: true)
+            }
         case .classroomReport:
-            print("")
+            if let report: ReportGenerator = dataFactory?.fetchReport() as? ReportGenerator {
+                let classrooms = report.classrooms
+                self.navigationController.pushViewController(ReportViewController(reports: classrooms), animated: true)
+            }
         case .mealReport:
             print("")
         case .kitchenReport:
@@ -56,6 +62,7 @@ class ViewBuilderFactory: ViewBuilderDelegate {
         }
     }
     
+    
     private func fetchData<T>(for type: T.Type, for dataType: MenuItem) -> T? {
         return dataFactory?.dataForType(dataType.dataType) as? T
     }
@@ -65,7 +72,8 @@ class ViewBuilderFactory: ViewBuilderDelegate {
         case .menu:
             self.navigationController.pushViewController(MenuViewController<T>(data), animated: true)
         case .report:
-            self.navigationController.pushViewController(ReportViewController(), animated: true)
+            guard let report = data as? [Report] else { return }
+            self.navigationController.pushViewController(ReportViewController(reports: report), animated: true)
         case .detail:
             self.navigationController.pushViewController(DetailsViewController(), animated: true)
         }
