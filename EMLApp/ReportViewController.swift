@@ -27,7 +27,6 @@ class ReportViewController: UIViewController, UITableViewDataSource, UITableView
         self.title = "Report"
         setupView()
         layoutView()
-        print(reports.count)
     }
     
     
@@ -46,6 +45,7 @@ class ReportViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueResusableCell(ofType: UITableViewCell.self, at: indexPath)
+        cell.backgroundColor = .systemBackground
         return populate(cell, with: reports[indexPath.section].subReports[indexPath.row])
     }
     
@@ -55,16 +55,28 @@ class ReportViewController: UIViewController, UITableViewDataSource, UITableView
             cell.textLabel?.text = schoolReport.title
         case let (classroomReport as ClassroomReport) where item is ClassroomReport:
             cell.textLabel?.text = classroomReport.title
-        case let (meal as MealReport) where item is MealReport:
-            cell.textLabel?.text = meal.title
+        case let (mealReport as MealReport) where item is MealReport:
+            cell.textLabel?.text = mealReport.title
+            cell.backgroundColor = cellBackground(for: mealReport)
         case let (packagingReport as PackagingReport) where item is PackagingReport:
             cell.textLabel?.text = packagingReport.title
         default:
             cell.textLabel?.text = ""
         }
-        
         return cell
     }
+    
+    private func cellBackground(for meal: MealReport) -> UIColor {
+        var color: UIColor = .systemBackground
+        if meal.chocking == true {
+            color = .yellow
+        }
+        if meal.allergy == true {
+            color = .red
+        }
+        return color
+    }
+    
     
 }
 
